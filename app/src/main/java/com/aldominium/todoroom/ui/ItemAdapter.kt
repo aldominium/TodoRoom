@@ -9,7 +9,8 @@ import com.aldominium.todoroom.R
 import com.aldominium.todoroom.data.Item
 
 class ItemAdapter: RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
-  val list = mutableListOf<Item>(Item("Sacar la basura"))
+  val list = mutableListOf<Item>()
+
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
     val view = LayoutInflater.from(parent.context).inflate(R.layout.item_row, parent, false)
     return ViewHolder(view)

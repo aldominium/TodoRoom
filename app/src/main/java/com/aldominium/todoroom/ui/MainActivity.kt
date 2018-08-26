@@ -3,7 +3,8 @@ package com.aldominium.todoroom.ui
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import android.widget.LinearLayout
+import android.view.View
+import android.widget.Toast
 import com.aldominium.todoroom.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,5 +20,9 @@ class MainActivity : AppCompatActivity() {
     recyclerView.adapter = adapter
 
 
+  }
+
+  fun addItem(view: View){
+    Toast.makeText(this,"Añadir elemento", Toast.LENGTH_LONG).show()
   }
 }
