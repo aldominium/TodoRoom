@@ -3,6 +3,7 @@ package com.aldominium.todoroom.ui
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Context
+import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
@@ -26,6 +27,8 @@ class MainActivity : AppCompatActivity() {
 
     mainViewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
+
+
     recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
     val adapter = ItemAdapter()
     recyclerView.adapter = adapter
@@ -42,6 +45,8 @@ class MainActivity : AppCompatActivity() {
 
 
   }
+
+
 
   fun addItem(view: View){
     if (itemEditText.text.isNotEmpty()) {
